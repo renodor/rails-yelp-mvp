@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h1 style="color: #8FBB99"><b><%= @restaurant.name %></b></h1>
+  <h4><%= @restaurant.category %> restaurant</h4>
+
+  <ul class="list-unstyled">
+    <li><b><i class="fas fa-home"></i></b> <%= @restaurant.address %></li>
+    <li><b><i class="fas fa-phone"></i></b> <%= @restaurant.phone_number %></li>
+  </ul>
+
+  <hr>
+  <h4>Reviews:</h4>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.rating %>/5 - <%= review.content %></li>
+    <% end %>
+  </ul>
+  <hr>
+  <%= link_to "Back to list", restaurants_path %>
+
+</div>
+
+
