@@ -8,6 +8,7 @@
   </ul>
 
   <hr>
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
   <h4>Reviews:</h4>
   <ul>
     <% @restaurant.reviews.each do |review| %>
